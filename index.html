@@ -24,17 +24,26 @@
     </header>
     <section class="home">
         <div class="home-img">
-            <img src="main.jpg" alt="">
+            <img src="main.jpg" alt="Main image">
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>T. Harsha Vardhan</span></h1>
             <h3 class="typing-text">I'm a Game Developer<span></span></h3>
-            <p>I am a dedicated professional with a passion. I thrive in collaborative environments and am committed to continuous learning and growth.</p>
+            <p>I am a dedicated professional with a passion for learning and growing in the game development field. I thrive in collaborative environments and am committed to continuous improvement.</p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/teegala-harsha-vardhan-081b6730b/"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/Tharshavardhanrao"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </section>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('nav');
+
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

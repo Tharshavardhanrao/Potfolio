@@ -336,3 +336,42 @@ span {
         padding: 3rem 2rem;
     }
 }
+.menu-toggle {
+    display: none;
+    font-size: 2.5rem;
+    color: #b74b4b;
+    cursor: pointer;
+}
+
+@media (max-width: 995px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        z-index: 101;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #161616;
+        width: 50%;
+        border-left: 3px solid #b74b4b;
+        border-bottom: 3px solid #b74b4b;
+        padding: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+}

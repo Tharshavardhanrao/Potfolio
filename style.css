@@ -185,16 +185,6 @@ span {
     right: -8px;
     animation: cursor 0.6s infinite;
 } */
-.typing-text {
-    font-size: 3.4rem;
-    font-weight: 600;
-    min-width: 280px;
-}
-
-.typing-text span {
-    color: #b74b4b;
-}
-
 
 @keyframes cursor {
     to {

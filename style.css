@@ -168,7 +168,7 @@ span {
 .typing-text span {
     position: relative;
 }
-
+/* 
 .typing-text span::before {
     content: "Game Developer";
     color: #b74b4b;
@@ -184,7 +184,7 @@ span {
     border-left: 3px solid #b74b4b;
     right: -8px;
     animation: cursor 0.6s infinite;
-}
+} */
 
 @keyframes cursor {
     to {

@@ -4,15 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Portfolio Website</title>
+    <style>
+        /* Basic CSS for typing effect */
+        .typing-text span {
+            border-right: 2px solid #000;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: typing 3s steps(20), blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 14ch; /* Adjust based on the word length */
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        /* Responsive nav (basic example) */
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <a href="#" class="logo">T. Harsha Vardhan</a>
         <nav>
-            <a href="#" class="active"> Home</a>
+            <a href="#" class="active">Home</a>
             <a href="projects.html">Projects</a>
             <a href="#">Skills</a>
             <a href="#">Education</a>
@@ -20,24 +72,26 @@
         </nav>
         <div class="menu-toggle" id="menu-toggle">
             <i class="fas fa-bars"></i>
-        </div>   
+        </div>
     </header>
+
     <section class="home">
         <div class="home-img">
-            <img src="main.jpg" alt="Main image">
+            <img src="main.jpg" alt="Portrait of T. Harsha Vardhan">
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>T. Harsha Vardhan</span></h1>
-            <h3 class="typing-text">I'm a <span> Gamr Developer</span></h3>
+            <h3 class="typing-text">I'm a <span id="typed-text">Game Developer</span></h3>
             <p>I am a dedicated professional with a passion for learning and growing in the game development field. I thrive in collaborative environments and am committed to continuous improvement.</p>
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/teegala-harsha-vardhan-081b6730b/"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/Tharshavardhanrao"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/teegala-harsha-vardhan-081b6730b/" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Tharshavardhanrao" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </section>
 
     <script>
+        // Menu toggle for small screens
         const toggle = document.getElementById('menu-toggle');
         const nav = document.querySelector('nav');
 
@@ -46,4 +100,5 @@
         });
     </script>
 </body>
+
 </html>
